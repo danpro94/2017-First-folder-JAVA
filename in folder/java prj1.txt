@@ -1,0 +1,105 @@
+1.
+public class hellojava {
+    public static void main(String args[]) {
+        System.out.println("Yoon Dooyong");
+        System.out.println("20130672");
+    }           
+}
+
+
+2.
+package javaproject;
+class Student {
+	String name;
+	int hakburn;
+
+	void print(){
+		System.out.println("이름: "+name);
+		System.out.println("학번: "+hakburn);
+	}
+}
+
+public class StudentPRJ {
+	public static void main(String args[]){
+		Student std = new Student();
+		std.name="윤두용";
+		std.hakburn=20130672;
+		std.print();
+	}
+}
+
+
+
+
+3.
+package javaproject;
+class Circle {
+	double d;
+	double size;
+
+	void print(){
+		System.out.println("반지름의 크기는 "+d+"입니다.");
+		System.out.println("원의 넓이는"+d+"+"+d+"+3.14인 "+size+"입니다.");
+	}
+}
+
+public class CirclePRJ {
+	public static void main(String args[]){
+		Circle cir = new Circle();
+		cir.d = 4.5;
+		cir.size=4.5+4.5+3.14;
+		cir.print();
+	}
+}  
+
+
+
+4.
+import java.util.Scanner;
+
+public class inputint {
+    public static void main(String args[]) {
+        int a, b;
+        
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("first number");
+        a=input.nextInt();
+        Sysyem.out.println("second number");
+        b=input.nextInt();
+        
+        System.out.println("sum= "+(a+b));
+        System.out.println("multply= "+(a*b));
+    }
+
+
+
+5. n개의 실수를 입력받아 배열에 저장후 합과 평균을 출력.
+package javaproject;
+import java.util.Scanner;
+
+public class inputarray {
+
+	public static void main(String[] args) {
+		int a = 0;
+		int count =0;
+
+		double ary[] = new double[10];
+		double sum = 0.0;
+		double average = 0.0;
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("입력할 실수의 개수를 쓰시오.");
+		count = sc.nextInt();
+
+		for(int i=0;i<count;i++){
+			System.out.print("값을 입력하세요.");
+			ary[i] =sc.nextDouble();
+			sum += ary[i];
+		}
+		average = sum/count;
+
+		System.out.println("입력 받은 실수의 합= "+sum);
+		System.out.println("입력 받은 실수의 평균= "+average);
+	}
+}
